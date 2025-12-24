@@ -1,9 +1,9 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20230331 (64-bit version)
- * Copyright (c) 2000 - 2023 Intel Corporation
+ * AML/ASL+ Disassembler version 20250404 (64-bit version)
+ * Copyright (c) 2000 - 2025 Intel Corporation
  * 
- * Disassembly of PPTT.aml, Mon Jul 31 09:21:22 2023
+ * Disassembly of PPTT.aml
  *
  * ACPI Data Table [PPTT]
  *
@@ -13,10 +13,10 @@
 [000h 0000 004h]                   Signature : "PPTT"    [Processor Properties Topology Table]
 [004h 0004 004h]                Table Length : 0000019E
 [008h 0008 001h]                    Revision : 01
-[009h 0009 001h]                    Checksum : 00     /* Incorrect checksum, should be C4 */
+[009h 0009 001h]                    Checksum : 00     /* Incorrect checksum, should be F1 */
 [00Ah 0010 006h]                      Oem ID : "QCOM  "
 [010h 0016 008h]                Oem Table ID : "QCOMEDK2"
-[018h 0024 004h]                Oem Revision : 00008280
+[018h 0024 004h]                Oem Revision : 00008550
 [01Ch 0028 004h]             Asl Compiler ID : "QCOM"
 [020h 0032 004h]       Asl Compiler Revision : 00000001
 
@@ -257,7 +257,7 @@
 Raw Table Data: Length 414 (0x19E)
 
     0000: 50 50 54 54 9E 01 00 00 01 00 51 43 4F 4D 20 20  // PPTT......QCOM  
-    0010: 51 43 4F 4D 45 44 4B 32 80 82 00 00 51 43 4F 4D  // QCOMEDK2....QCOM
+    0010: 51 43 4F 4D 45 44 4B 32 50 85 00 00 51 43 4F 4D  // QCOMEDK2P...QCOM
     0020: 01 00 00 00 01 18 00 00 00 00 00 00 00 00 00 00  // ................
     0030: 00 00 00 00 00 00 00 00 00 00 00 00 02 1E 00 00  // ................
     0040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  // ................

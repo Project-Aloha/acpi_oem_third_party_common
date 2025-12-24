@@ -1,9 +1,9 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20230331 (64-bit version)
- * Copyright (c) 2000 - 2023 Intel Corporation
+ * AML/ASL+ Disassembler version 20250404 (64-bit version)
+ * Copyright (c) 2000 - 2025 Intel Corporation
  * 
- * Disassembly of SPCR.aml, Mon Jul 31 09:21:22 2023
+ * Disassembly of SPCR.aml
  *
  * ACPI Data Table [SPCR]
  *
@@ -13,12 +13,12 @@
 [000h 0000 004h]                   Signature : "SPCR"    [Serial Port Console Redirection Table]
 [004h 0004 004h]                Table Length : 00000050
 [008h 0008 001h]                    Revision : 02
-[009h 0009 001h]                    Checksum : D2
+[009h 0009 001h]                    Checksum : 00     /* Incorrect checksum, should be 7C */
 [00Ah 0010 006h]                      Oem ID : "QCOM  "
 [010h 0016 008h]                Oem Table ID : "QCOMEDK2"
-[018h 0024 004h]                Oem Revision : 00008280
-[01Ch 0028 004h]             Asl Compiler ID : "INTL"
-[020h 0032 004h]       Asl Compiler Revision : 20230331
+[018h 0024 004h]                Oem Revision : 00008550
+[01Ch 0028 004h]             Asl Compiler ID : "QCOM"
+[020h 0032 004h]       Asl Compiler Revision : 00000001
 
 [024h 0036 001h]              Interface Type : 13
 [025h 0037 003h]                    Reserved : 000000
@@ -38,7 +38,7 @@
 [03Ch 0060 001h]                   Stop Bits : 01
 [03Dh 0061 001h]                Flow Control : 00
 [03Eh 0062 001h]               Terminal Type : 03
-[04Ch 0076 001h]                    Reserved : 00
+[03Fh 0063 001h]                    Language : 00
 [040h 0064 002h]               PCI Device ID : FFFF
 [042h 0066 002h]               PCI Vendor ID : FFFF
 [044h 0068 001h]                     PCI Bus : 00
@@ -46,12 +46,6 @@
 [046h 0070 001h]                PCI Function : 00
 [047h 0071 004h]                   PCI Flags : 00000000
 [04Bh 0075 001h]                 PCI Segment : 00
-[04Ch 0076 004h]                    Reserved : 00000000
-
-Raw Table Data: Length 80 (0x50)
-
-    0000: 53 50 43 52 50 00 00 00 02 D2 51 43 4F 4D 20 20  // SPCRP.....QCOM  
-    0010: 51 43 4F 4D 45 44 4B 32 80 82 00 00 49 4E 54 4C  // QCOMEDK2....INTL
-    0020: 31 03 23 20 13 00 00 00 00 20 00 20 00 C0 A9 00  // 1.# ..... . ....
-    0030: 00 00 00 00 08 00 82 01 00 00 07 00 01 00 03 00  // ................
-    0040: FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00  // ................
+[04Ch 0076 004h]             Uart Clock Freq : 00000000
+/**** ACPI table terminates in the middle of a data structure! (dump table)
+CurrentOffset: 50, TableLength: 50 ***/
